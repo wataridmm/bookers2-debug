@@ -1348,3 +1348,40 @@ Did you mean?  new_user_session_path
     13:           <%= link_to 'Sign Up',new_user_registrations_path, class: "btn btn-success btn-sm btn-block sign_up" %>
   
 app/views/homes/top.html.erb:10:in `_app_views_homes_top_html_erb___632003927625566836_70137065158160'
+Started GET "/" for 111.108.208.65 at 2021-10-02 14:40:04 +0000
+Cannot render console from 111.108.208.65! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (350.4ms)
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_registrations_path' for #<#<Class:0x0000000003467a00>:0x00000000031a2428>
+Did you mean?  new_user_registration_path
+               new_user_registration_url
+               cancel_user_registration_path
+               new_registration_path):
+    10:           <%= link_to 'Log in',new_user_session_path, class: "btn btn-info btn-sm btn-block mb-3 sign_in" %>
+    11:         </div>
+    12:         <div class="row">
+    13:           <%= link_to 'Sign Up',new_user_registrations_path, class: "btn btn-success btn-sm btn-block sign_up" %>
+    14:         </div>
+    15:       </div>
+    16:     </div>
+  
+app/views/homes/top.html.erb:13:in `_app_views_homes_top_html_erb__35869997210674052_27467100'
+Started GET "/" for 111.108.208.65 at 2021-10-02 14:40:26 +0000
+Cannot render console from 111.108.208.65! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (9.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 462ms (Views: 455.0ms | ActiveRecord: 0.0ms)
+
+
