@@ -1090,3 +1090,49 @@ Load paths:
   
 app/assets/stylesheets/application.scss:18
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2274244268245640605_70119949985600'
+Started GET "/users/sign_in" for 111.108.208.65 at 2021-10-02 14:05:46 +0000
+Cannot render console from 111.108.208.65! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 5991ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7:     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11:   <body>
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4031217676393429181_36264400'
+Started GET "/users/sign_in" for 111.108.208.65 at 2021-10-02 14:06:30 +0000
+Cannot render console from 111.108.208.65! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 405ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (require_tree argument must be a directory):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7:     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11:   <body>
+  
+app/assets/javascripts/cable.js:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___294876249042093898_40846880'
