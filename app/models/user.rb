@@ -8,6 +8,6 @@ class User < ApplicationRecord
   attachment :profile_image, destroy: false
 
   validates :name, length: {maximum: 20, minimum: 2}, uniqueness: true
-  validates :introduction
+  validates :introduction,  length: {maximum: 200}
 end
 
