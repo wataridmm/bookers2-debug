@@ -1,7 +1,7 @@
 class Favorite < ApplicationRecord
   belongs_to :user
-  belongs_to :post_book
-  
-  
-  
+  belongs_to :book
+
+
+
 end
