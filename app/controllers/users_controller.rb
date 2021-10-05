@@ -13,6 +13,8 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @book = Book.new
+    # @relationship = current_user.relationships.find_by(follow_id: @user.id)
+    # @set_relationship = current_user.relationships.new
   end
 
   def edit
