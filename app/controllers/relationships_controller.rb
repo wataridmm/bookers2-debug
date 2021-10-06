@@ -10,4 +10,16 @@ class RelationshipsController < ApplicationController
     current_user.unfollow(user)
     redirect_back(fallback_location: root_path)
   end
+
+  def followings
+    user = User.find(params[:id])
+    @users = user.following
+  end
+
+  def followers
+    user = User.find(params[:id])
+    @users = user.followers
+  end
+
+
 end
