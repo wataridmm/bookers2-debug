@@ -10,14 +10,16 @@
   </tr>
   <tr>
     <th>follows</th>
-    <th><%= link_to followings_user_path do %>
-      <%= render 'relationships/following_count' %></th>
+    <th>
+      <%= link_to followings_user_path(user.id) do %>
+        <%= render 'relationships/following_count', user: user %>
       <% end %>
+    </th>
   </tr>
   <tr>
     <th>followers</th>
-    <th><%= link_to followers_user_path do %>
-    <%= render 'relationships/followers_count' %>
+    <th><%= link_to followers_user_path(user.id) do %>
+    <%= render 'relationships/followers_count',user: user %>
     <% end %>
     </th>
 
