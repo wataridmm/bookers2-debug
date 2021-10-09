@@ -1,14 +1,15 @@
 class SearchController < ApplicationController
-  
+
   def search
     @model = params["search"]["model"]
     @value = params["search"]["value"]
     @how = params["search"]["how"]
+    # binding.pry
     @datas = search_for(@how, @model, @value)
   end
-  
+
   private
-  
+
   def match(model, value)
     if model == 'user'
       User.where(name: value)
@@ -16,15 +17,15 @@ class SearchController < ApplicationController
         Book.where(title: value)
     end
   end
-  
+
   def forward(model, value)
-    if model == 'User'
+    if model == 'user'
       User.where("name LIKE ?", "#{value}%")
     elsif model == 'book'
         Book.where("title LIKE ?", "#{value}%")
     end
   end
-  
+
   def backward(model, value)
     if model == 'user'
       User.where("name LIKE ?", "%#{value}")
@@ -32,15 +33,15 @@ class SearchController < ApplicationController
       Book.where("title LIKE ?", "%#{value}")
     end
   end
-  
-  def pertical(model, value)
+
+  def partical(model, value)
     if model == 'user'
     User.where("name LIKE ?", "%#{value}%")
     elsif model == 'book'
       Book.where("title LIKE ?", "%#{value}%")
     end
   end
-    
+
   def search_for(how, model, value)
     case how
     when 'match'
@@ -49,9 +50,8 @@ class SearchController < ApplicationController
       forward(model, value)
     when 'backward'
       backward(model, value)
-    when 'pertical'
-      pertical(model, value)
+    when 'partical'
+      partical(model, value)
     end
   end
-
 end
