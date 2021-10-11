@@ -54,4 +54,5 @@ class SearchController < ApplicationController
       partical(model, value)
     end
   end
+  
 end
